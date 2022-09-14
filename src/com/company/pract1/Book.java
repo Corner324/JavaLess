@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pract1;
 
 public class Book {
 

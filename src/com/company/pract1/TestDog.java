@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pract1;
 
 public class TestDog {
     public static void main(String[] args) {

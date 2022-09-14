@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pract2;
 
 class TestAuthor{
     public static void main(String[] args) {

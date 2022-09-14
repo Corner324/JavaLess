@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pract2;
 import java.lang.String;
 
 public class Ball {

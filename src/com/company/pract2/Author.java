@@ -1,4 +1,4 @@
-package com.company;
+package com.company.pract2;
 
 public class Author {
 
