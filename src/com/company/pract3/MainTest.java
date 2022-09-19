@@ -10,7 +10,7 @@ public class MainTest {
         System.out.println(s1.getPerimeter()); // which version?
         System.out.println(s1.getColor());
         System.out.println(s1.isFilled());
-        // System.out.println(s1.getRadius());
+        // System.out.println(s1.getRadius()); // нет такого метода
 
         Circle c1 = (Circle) s1; // Downcast back to Circle
         System.out.println(c1);
@@ -27,7 +27,7 @@ public class MainTest {
         System.out.println(s3.getArea());
         System.out.println(s3.getPerimeter());
         System.out.println(s3.getColor());
-        // System.out.println(s3.getLength());
+        // System.out.println(s3.getLength()); // нет такого метода
 
         Rectangle r1 = (Rectangle) s3; // downcast
         System.out.println(r1);
@@ -39,7 +39,24 @@ public class MainTest {
         System.out.println(s4);
         System.out.println(s4.getArea());
         System.out.println(s4.getColor());
-        // System.out.println(s4.getSide());
+        // System.out.println(s4.getSide()); // getSide отсутствует в Shape
+
+        // Take note that we downcast Shape s4 to Rectangle,
+        // which is a superclass of Square, instead of Square
+        Rectangle r2 = (Rectangle)s4;
+        System.out.println(r2);
+        System.out.println(r2.getArea());
+        System.out.println(r2.getColor());
+        // System.out.println(r2.getSide()); // getSide только в Square
+        System.out.println(r2.getLength());
+
+        // Downcast Rectangle r2 to Square
+        Square sq1 = (Square)r2;
+        System.out.println(sq1);
+        System.out.println(sq1.getArea());
+        System.out.println(sq1.getColor());
+        System.out.println(sq1.getSide());
+        System.out.println(sq1.getLength());
 
     }
 
