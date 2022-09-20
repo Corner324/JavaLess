@@ -58,6 +58,10 @@ public class MainTest {
         System.out.println(sq1.getSide());
         System.out.println(sq1.getLength());
 
+
+
+
+
     }
 
 }

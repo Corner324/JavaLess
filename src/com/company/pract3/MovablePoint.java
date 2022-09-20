@@ -14,11 +14,18 @@ public class MovablePoint implements Movable {
     int ySpeed;
 
 
-
-    public void moveUp(){}
-    public void moveDown(){}
-    public void moveLeft(){}
-    public void moveRight(){}
+    public void moveUp(){
+        this.y=this.y+this.ySpeed;
+    }
+    public void moveDown(){
+        this.y=this.y-this.ySpeed;
+    }
+    public void moveLeft(){
+        this.x=this.x-this.xSpeed;
+    }
+    public void moveRight(){
+        this.x=this.x+this.xSpeed;
+    }
 
 
     @Override

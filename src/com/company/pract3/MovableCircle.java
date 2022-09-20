@@ -8,10 +8,18 @@ public class MovableCircle implements Movable {
     int radius;
     MovablePoint center;
 
-    public void moveUp(){}
-    public void moveDown(){}
-    public void moveLeft(){}
-    public void moveRight(){}
+    public void moveUp(){
+        this.center.y=this.center.y + this.center.ySpeed;
+    }
+    public void moveDown(){
+        this.center.y=this.center.y - this.center.ySpeed;
+    }
+    public void moveLeft(){
+        this.center.x=this.center.x - this.center.xSpeed;
+    }
+    public void moveRight(){
+        this.center.x=this.center.x + this.center.xSpeed;
+    }
 
 
 }
