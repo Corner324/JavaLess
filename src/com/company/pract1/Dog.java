@@ -35,7 +35,7 @@ public class Dog {
         System.out.println( name + "`s age in human years is " + age*7 + " ages");
     }
 
-    @Override
+
     public String toString() {
         return "Dog{" +
                 "name='" + name + '\'' +

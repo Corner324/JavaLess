@@ -1,11 +1,16 @@
 package com.company.pract2;
 
-class TestAuthor{
-    public static void main(String[] args) {
 
-        Author auth = new Author("Name","Email",'F');
+public class TestAuthor{
+    public static void main() {
+        System.out.println("Class Author: ");
 
+        Author auth = new Author("Mark","mark@gmail.com",'M');
+
+        System.out.println(auth.getEmail());
         System.out.println(auth);
+        System.out.println();
 
     }
 }
+
