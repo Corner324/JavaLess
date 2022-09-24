@@ -27,9 +27,11 @@ public class Main {
 
         System.out.println(" ------ Лабораторная 1 ------ ");
         TestCycle.main();
+        System.out.println("");
 
         System.out.println(" ------ Лабораторная 2 ------ ");
         TestHuman.main();
+        System.out.println("");
 
     }
 
