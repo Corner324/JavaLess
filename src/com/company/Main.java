@@ -1,11 +1,7 @@
 package com.company;
-import com.company.lab1.TestCycle;
-import com.company.lab2.TestHuman;
-import com.company.pract1.TestBall;
-import com.company.pract1.TestBook;
-import com.company.pract1.TestDog;
-import com.company.pract2.TestAuthor;
-import com.company.pract2.TestBall2;
+import com.company.lab.lab1.TestCycle;
+import com.company.lab.lab2.TestHuman;
+import com.company.lab.lab3.TestFurniture;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,10 +16,8 @@ public class Main {
         TestBall2.main();
         TestAuthor.main();
 
-
         System.out.println(" ------ Практическая 3 ------ ");
 
-        */
 
         System.out.println(" ------ Лабораторная 1 ------ ");
         TestCycle.main();
@@ -32,6 +26,13 @@ public class Main {
         System.out.println(" ------ Лабораторная 2 ------ ");
         TestHuman.main();
         System.out.println("");
+
+        */
+
+        System.out.println(" ------ Лабораторная 3 ------ ");
+        TestFurniture.main();
+        System.out.println("");
+
 
     }
 
