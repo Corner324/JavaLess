@@ -1,4 +1,4 @@
-package com.company.pract.pract4;
+package com.company.pract;
 
 import java.awt.*;
 import javax.swing.*;

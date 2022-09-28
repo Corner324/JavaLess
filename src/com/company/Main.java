@@ -1,8 +1,5 @@
 package com.company;
-import com.company.lab.lab1.TestCycle;
-import com.company.lab.lab2.TestHuman;
-import com.company.lab.lab3.TestFurniture;
-import com.company.pract.pract4.SimpleGUI;
+import com.company.pract.pract4.GUI;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,8 +33,7 @@ public class Main {
 
         */
 
-        SimpleGUI app = new SimpleGUI();
-        app.setVisible(true);
+        new GUI().setVisible(true);
 
 
     }
