@@ -1,4 +1,5 @@
 package com.company;
+import com.company.lab.lab4.TestNameable;
 import com.company.pract.pract4.GUI;
 
 public class Main {
@@ -26,14 +27,20 @@ public class Main {
         System.out.println("");
 
 
-
         System.out.println(" ------ Лабораторная 3 ------ ");
         TestFurniture.main();
         System.out.println("");
 
+        System.out.println(" ------ Практическая 4 ------ ");
+        new GUI().setVisible(true);
+        System.out.println("");
+
         */
 
-        new GUI().setVisible(true);
+        System.out.println(" ------ Лабораторная 4 ------ ");
+        TestNameable.main();
+        System.out.println("");
+
 
 
     }
