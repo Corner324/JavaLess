@@ -1,5 +1,4 @@
 package com.company.pract.pract4;
-import com.company.pract.SimpleGUI;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
