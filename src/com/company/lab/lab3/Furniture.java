@@ -16,6 +16,8 @@ abstract public class Furniture {
     int width;
     int price;
 
+    abstract void discounted(int discount);
+
     @Override
     public String toString(){
         return "Характеристки: \n" +

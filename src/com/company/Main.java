@@ -1,4 +1,5 @@
 package com.company;
+import com.company.lab.lab3.TestFurniture;
 import com.company.lab.lab4.TestNameable;
 import com.company.lab.lab5.GUI2;
 import com.company.lab.lab6.GUI3;
@@ -8,6 +9,14 @@ import com.company.pract.pract6.Tested;
 
 public class Main {
     public static void main(String[] args) {
+
+        System.out.println(" ------ Лабораторная 3 ------ ");
+        TestFurniture.main();
+        System.out.println("");
+
+        System.out.println(" ------ Лабораторная 4 ------ ");
+        TestNameable.main();
+        System.out.println("");
 
         /*
         System.out.println(" ------ Практическая 1 ------ ");
@@ -29,17 +38,13 @@ public class Main {
         TestHuman.main();
         System.out.println("");
 
-        System.out.println(" ------ Лабораторная 3 ------ ");
-        TestFurniture.main();
-        System.out.println("");
+
 
         System.out.println(" ------ Практическая 4 ------ ");
         new GUI().setVisible(true);
         System.out.println("");
 
-        System.out.println(" ------ Лабораторная 4 ------ ");
-        TestNameable.main();
-        System.out.println("");
+
 
         System.out.println(" ------ Практическая 5 ------ ");
         Recursion.alg1();
@@ -53,13 +58,15 @@ public class Main {
         new GUI2(); // GUI1 maybe?
         System.out.println("");
 
+        System.out.println(" ------ Лабораторная 6 ------ "); // НЕ ДОДЕЛАНА
+        new GUI3().setVisible(true);
+        System.out.println("");
+
          */
 
 
 
-        System.out.println(" ------ Лабораторная 6 ------ "); // НЕ ДОДЕЛАНА
-        new GUI3().setVisible(true);
-        System.out.println("");
+
 
 
 

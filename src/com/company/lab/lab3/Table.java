@@ -2,6 +2,11 @@ package com.company.lab.lab3;
 
 public class Table extends Furniture{
 
+    @Override
+    void discounted(int discount){
+        price = price - discount;
+    }
+
     public Table(String color,
                int height,
                int length,

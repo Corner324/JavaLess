@@ -11,7 +11,9 @@ public class FurnitureShop{
         System.out.println("2. СТОЛ \n" + table);
         System.out.println("3. ШКАФ \n" + wardrobe);
 
+        bad.discounted(90);
 
+        System.out.println("1. КРОВАТЬ \n" + bad);
     }
 
 }
