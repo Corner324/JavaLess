@@ -18,6 +18,11 @@ public class Main {
         TestNameable.main();
         System.out.println("");
 
+        System.out.println(" ------ Практическая 5 ------ ");
+        Recursion rec = new Recursion();
+        rec.main();
+
+
         /*
         System.out.println(" ------ Практическая 1 ------ ");
         TestDog.main();
@@ -46,10 +51,7 @@ public class Main {
 
 
 
-        System.out.println(" ------ Практическая 5 ------ ");
-        Recursion.alg1();
-        Recursion.alg2();
-        Recursion.alg3();
+
 
         System.out.println(" ------ Практическая 6 ------ ");
         Tested.main();
