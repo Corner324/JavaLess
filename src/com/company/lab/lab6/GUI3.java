@@ -13,7 +13,6 @@ public class GUI3 extends JFrame
     private final JTextField input = new JTextField("",10);
     private final JLabel label = new JLabel("Попытка 1  ");
 
-
     public GUI3()
     {
         super("Игра-угадайка");
@@ -24,6 +23,7 @@ public class GUI3 extends JFrame
         input.setFont(new Font("Courier", Font.BOLD,12));
 
         number = (int)(Math.random()*((MAX-MIN)+1))+MIN;
+        System.out.println(number);
 
         // Панель содержимого
         Container container = getContentPane();
@@ -37,8 +37,6 @@ public class GUI3 extends JFrame
         container.add(input);
         container.add(button);
 
-
-
         button.addActionListener(new ButtonEventListener1());
 
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
@@ -47,10 +45,9 @@ public class GUI3 extends JFrame
         this.setLocation(x, y);
         setSize(280,130);
         setResizable(false);
-
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
     }
-
 
     class ButtonEventListener1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
@@ -62,18 +59,25 @@ public class GUI3 extends JFrame
                     if (Integer.parseInt(input.getText()) != number) {
                         String messege = "Вы не угадали. Загадное число - " + number + "\nКоличество попыток закончилось. \n                     Игра проиграна. ";
                         JOptionPane.showMessageDialog(null, messege, "ПРОИГРЫШ", JOptionPane.PLAIN_MESSAGE);
-                        input.setText(" ");
+                        input.setText("");
                         number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
+                        System.out.println(number);
                         attempts = 0;
                     }
-
                 }
-                if ((input.getText().equals("")) | (Integer.parseInt(input.getText()) == number) ) {
+                else if ((input.getText().equals("")) || (Integer.parseInt(input.getText()) == number) ) {
                     String messege2 = "Вы верно угадали число! ";
                     number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
+                    System.out.println(number);
                     JOptionPane.showMessageDialog(null, messege2, "ПОБЕДА", JOptionPane.PLAIN_MESSAGE);
                     attempts = 1;
                 } else {
+                    String temp = null;
+                    if((Integer.parseInt(input.getText()) > number)){ temp = "больше заданного"; }
+                    if((Integer.parseInt(input.getText()) < number)){ temp = "меньше заданного"; }
+
+                    String messege3 = "Ваше число " + temp;
+                    JOptionPane.showMessageDialog(null, messege3, "Вы не угадали", JOptionPane.PLAIN_MESSAGE);
                     attempts++;
                     label.setText("Попытка " + attempts + "  ");
 

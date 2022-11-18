@@ -10,6 +10,13 @@ import com.company.pract.pract6.Tested;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println(" ------ Лабораторная 6 ------ ");
+        new GUI3().setVisible(true);
+        System.out.println("");
+
+
+        /*
+
         System.out.println(" ------ Лабораторная 3 ------ ");
         TestFurniture.main();
         System.out.println("");
@@ -22,8 +29,6 @@ public class Main {
         Recursion rec = new Recursion();
         rec.main();
 
-
-        /*
         System.out.println(" ------ Практическая 1 ------ ");
         TestDog.main();
         TestBall.main();
@@ -56,13 +61,13 @@ public class Main {
         System.out.println(" ------ Практическая 6 ------ ");
         Tested.main();
 
-        System.out.println(" ------ Лабораторная 5 ------ "); // НЕ ДОДЕЛАНА
-        new GUI2(); // GUI1 maybe?
+        System.out.println(" ------ Лабораторная 5 ------ ");
+        new GUI2(args); // GUI1 maybe?
         System.out.println("");
 
-        System.out.println(" ------ Лабораторная 6 ------ "); // НЕ ДОДЕЛАНА
-        new GUI3().setVisible(true);
-        System.out.println("");
+
+
+
 
          */
 

@@ -1,5 +1,4 @@
 package com.company.lab.lab5;
-
 import java.awt.*;
 import javax.swing.*;
 import java.awt.image.BufferedImage;
@@ -8,48 +7,36 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
 import java.util.concurrent.TimeUnit;
 
 public class GUI2 extends JFrame {
 
-
-    public GUI2() {
-        super("Практическая 4 | Таблица результатов матчей");
+    public GUI2(String[] args) {
+        super("Лабораторная 5 | Картинка");
         JFrame frame = new JFrame();
+
         try {
-            String IMG_PATH;
-            BufferedImage img;
-            ImageIcon icon;
-            JLabel label;
+
+            String IMG_PATH = args[0];
             Container container = this.getContentPane();
+            container.setLayout (new FlowLayout(FlowLayout.CENTER));
 
+            System.out.println("* Путь к файлу - " + IMG_PATH);
 
-            while (true) {
-                for (int i = 1; i < 10; i++) {
-                    container.setLayout (new FlowLayout(FlowLayout.CENTER));
+            BufferedImage img = ImageIO.read(new File(IMG_PATH));
+            int height = img.getHeight();
+            int width = img.getWidth();
+            ImageIcon icon = new ImageIcon(img);
+            JLabel label = new JLabel(icon);
+            container.add(label);
 
-                    IMG_PATH = String.format("C:/Users/Corner/IdeaProjects/JavaLess/src/com/company/lab/lab5/anim/%d.png", i);
-                    System.out.println(IMG_PATH);
-                    img = ImageIO.read(new File(IMG_PATH));
-                    icon = new ImageIcon(img);
-                    label = new JLabel(icon);
-                    frame.getContentPane().add(label,BorderLayout.CENTER);
-                    frame.pack();
-                    frame.setLocationRelativeTo(null);
-                    setVisible(true);
-                    TimeUnit.SECONDS.sleep(1);
-                    // this.dispose();
+            frame.setLocationRelativeTo(null);
+            setVisible(true);
+            setSize(width,height);
+            this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-                    // https://www.youtube.com/watch?v=wI-qNBrtT3k
-                }
-            }
-
-        } catch (IOException | InterruptedException e) {
+        } catch (IOException e) {
             e.printStackTrace();}
-
-        setSize(400, 400);
-
 
     }
 }
