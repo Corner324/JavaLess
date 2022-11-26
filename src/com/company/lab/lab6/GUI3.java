@@ -5,8 +5,8 @@ import java.awt.event.*;
 
 public class GUI3 extends JFrame
 {
-    int MAX = 20;
-    int MIN = 0;
+    int MAX = 19;
+    int MIN = 1;
     static int attempts = 1;
     static int number = 0;
     private JButton button = new JButton("Угадай");
@@ -25,14 +25,10 @@ public class GUI3 extends JFrame
         number = (int)(Math.random()*((MAX-MIN)+1))+MIN;
         System.out.println(number);
 
-        // Панель содержимого
         Container container = getContentPane();
-        /*
-         * Определение последовательного расположения
-         * с выравниванием компонентов по центру
-         */
+
         container.setLayout (new FlowLayout(FlowLayout.CENTER));
-        // добавляем компоненты
+
         container.add(label);
         container.add(input);
         container.add(button);
@@ -51,11 +47,21 @@ public class GUI3 extends JFrame
 
     class ButtonEventListener1 implements ActionListener{
         public void actionPerformed(ActionEvent e){
-            if (input.getText().isEmpty() ){
+            if ((input.getText().isEmpty()) || (Integer.parseInt(input.getText()) < 1 || Integer.parseInt(input.getText()) > 20) ){
                 JOptionPane.showMessageDialog(null,"Впишите в поле выше число между 0 и 20", "Ошибка", JOptionPane.PLAIN_MESSAGE);
             }
             else {
-                if (attempts == 3) {
+                if ((input.getText().equals("")) || (Integer.parseInt(input.getText()) == number) ) {
+                    String messege2 = "Вы верно угадали число! ";
+                    number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
+                    System.out.println(number);
+                    JOptionPane.showMessageDialog(null, messege2, "ПОБЕДА", JOptionPane.PLAIN_MESSAGE);
+                    input.setText("");
+                    number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
+                    System.out.println(number);
+                    attempts = 0;
+                }
+                else if (attempts == 3) {
                     if (Integer.parseInt(input.getText()) != number) {
                         String messege = "Вы не угадали. Загадное число - " + number + "\nКоличество попыток закончилось. \n                     Игра проиграна. ";
                         JOptionPane.showMessageDialog(null, messege, "ПРОИГРЫШ", JOptionPane.PLAIN_MESSAGE);
@@ -65,13 +71,7 @@ public class GUI3 extends JFrame
                         attempts = 0;
                     }
                 }
-                else if ((input.getText().equals("")) || (Integer.parseInt(input.getText()) == number) ) {
-                    String messege2 = "Вы верно угадали число! ";
-                    number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
-                    System.out.println(number);
-                    JOptionPane.showMessageDialog(null, messege2, "ПОБЕДА", JOptionPane.PLAIN_MESSAGE);
-                    attempts = 1;
-                } else {
+                 else {
                     String temp = null;
                     if((Integer.parseInt(input.getText()) > number)){ temp = "больше заданного"; }
                     if((Integer.parseInt(input.getText()) < number)){ temp = "меньше заданного"; }
@@ -85,6 +85,4 @@ public class GUI3 extends JFrame
             }
         }
     }
-
-
 }

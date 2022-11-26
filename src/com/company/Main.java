@@ -17,12 +17,16 @@ public class Main {
         System.out.println(" ------ Практическая 6 ------ ");
         Tested.main();
 
-        /*
-
+        System.out.println(" ------ Лабораторная 5 ------ ");
+        // new GUI2(args);
+        System.out.println("");
 
         System.out.println(" ------ Лабораторная 6 ------ ");
-        new GUI3().setVisible(true);
+        // new GUI3().setVisible(true);
         System.out.println("");
+
+
+        /*
 
         System.out.println(" ------ Практическая 4 ------ ");
         new GUI().setVisible(true);
@@ -55,13 +59,6 @@ public class Main {
         System.out.println(" ------ Лабораторная 2 ------ ");
         TestHuman.main();
         System.out.println("");
-
-
-        System.out.println(" ------ Лабораторная 5 ------ ");
-        new GUI2(args); // GUI1 maybe?
-        System.out.println("");
-
-
 
          */
 
