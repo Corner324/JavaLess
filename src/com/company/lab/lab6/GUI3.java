@@ -46,42 +46,48 @@ public class GUI3 extends JFrame
     }
 
     class ButtonEventListener1 implements ActionListener{
-        public void actionPerformed(ActionEvent e){
-            if ((input.getText().isEmpty()) || (Integer.parseInt(input.getText()) < 1 || Integer.parseInt(input.getText()) > 20) ){
-                JOptionPane.showMessageDialog(null,"Впишите в поле выше число между 0 и 20", "Ошибка", JOptionPane.PLAIN_MESSAGE);
-            }
-            else {
-                if ((input.getText().equals("")) || (Integer.parseInt(input.getText()) == number) ) {
-                    String messege2 = "Вы верно угадали число! ";
-                    number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
-                    System.out.println(number);
-                    JOptionPane.showMessageDialog(null, messege2, "ПОБЕДА", JOptionPane.PLAIN_MESSAGE);
-                    input.setText("");
-                    number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
-                    System.out.println(number);
-                    attempts = 0;
-                }
-                else if (attempts == 3) {
-                    if (Integer.parseInt(input.getText()) != number) {
-                        String messege = "Вы не угадали. Загадное число - " + number + "\nКоличество попыток закончилось. \n                     Игра проиграна. ";
-                        JOptionPane.showMessageDialog(null, messege, "ПРОИГРЫШ", JOptionPane.PLAIN_MESSAGE);
+        public void actionPerformed(ActionEvent e) {
+            try {
+                if ((input.getText().isEmpty()) || (Integer.parseInt(input.getText()) < 1 || Integer.parseInt(input.getText()) > 20)) {
+                    JOptionPane.showMessageDialog(null, "Впишите в поле выше число между 0 и 20", "Ошибка", JOptionPane.PLAIN_MESSAGE);
+                } else {
+                    if ((input.getText().equals("")) || (Integer.parseInt(input.getText()) == number)) {
+                        String messege2 = "Вы верно угадали число! ";
+                        JOptionPane.showMessageDialog(null, messege2, "ПОБЕДА", JOptionPane.PLAIN_MESSAGE);
                         input.setText("");
                         number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
                         System.out.println(number);
+                        label.setText("Попытка 1");
                         attempts = 0;
+                    } else if (attempts == 3) {
+                        if (Integer.parseInt(input.getText()) != number) {
+                            String messege = "Вы не угадали. Загадное число - " + number + "\nКоличество попыток закончилось. \n                     Игра проиграна. ";
+                            JOptionPane.showMessageDialog(null, messege, "ПРОИГРЫШ", JOptionPane.PLAIN_MESSAGE);
+                            input.setText("");
+                            number = (int) (Math.random() * ((MAX - MIN) + 1)) + MIN;
+                            System.out.println(number);
+                            label.setText("Попытка 1");
+                            attempts = 0;
+                        }
+                    } else {
+                        String temp = null;
+                        if ((Integer.parseInt(input.getText()) > number)) {
+                            temp = "больше заданного";
+                        }
+                        if ((Integer.parseInt(input.getText()) < number)) {
+                            temp = "меньше заданного";
+                        }
+
+                        String messege3 = "Ваше число " + temp;
+                        JOptionPane.showMessageDialog(null, messege3, "Вы не угадали", JOptionPane.PLAIN_MESSAGE);
+                        attempts++;
+                        label.setText("Попытка " + attempts + "  ");
+
                     }
                 }
-                 else {
-                    String temp = null;
-                    if((Integer.parseInt(input.getText()) > number)){ temp = "больше заданного"; }
-                    if((Integer.parseInt(input.getText()) < number)){ temp = "меньше заданного"; }
-
-                    String messege3 = "Ваше число " + temp;
-                    JOptionPane.showMessageDialog(null, messege3, "Вы не угадали", JOptionPane.PLAIN_MESSAGE);
-                    attempts++;
-                    label.setText("Попытка " + attempts + "  ");
-
-                }
+            } catch (NumberFormatException ex) {
+                String messegeError = "Задан неверный формат числа";
+                JOptionPane.showMessageDialog(null, messegeError, "Ошибка", JOptionPane.PLAIN_MESSAGE);
             }
         }
     }

@@ -7,10 +7,7 @@ import java.util.Scanner;
 public class Recursion {
     Scanner in = new Scanner(System.in);
 
-   /*
-    Дано натуральное число N. Выведите все его цифры по одной, в обратном
-  порядке, разделяя их пробелами или новыми строками.
-   */
+
 
     public void main() {
         System.out.println("Алгоритм 1. ");
@@ -20,6 +17,11 @@ public class Recursion {
         System.out.println("Алгоритм 3. ");
         alg3();
     }
+
+    /*
+    Дано натуральное число N. Выведите все его цифры по одной, в обратном
+  порядке, разделяя их пробелами или новыми строками.
+    */
 
     void rec1(int n){
         if (n % 10 > 0){

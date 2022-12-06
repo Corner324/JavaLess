@@ -18,11 +18,11 @@ public class Main {
         Tested.main();
 
         System.out.println(" ------ Лабораторная 5 ------ ");
-        // new GUI2(args);
+        //new GUI2(args);
         System.out.println("");
 
         System.out.println(" ------ Лабораторная 6 ------ ");
-        // new GUI3().setVisible(true);
+        //new GUI3().setVisible(true);
         System.out.println("");
 
 
