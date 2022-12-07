@@ -1,14 +1,15 @@
 package com.company;
-import com.company.lab.lab3.TestFurniture;
-import com.company.lab.lab4.TestNameable;
-import com.company.lab.lab5.GUI2;
-import com.company.lab.lab6.GUI3;
-import com.company.pract.pract4.GUI;
-import com.company.pract.pract5.Recursion;
-import com.company.pract.pract6.Tested;
+import com.company.pract.pract7.Game;
 
 public class Main {
     public static void main(String[] args) {
+
+        System.out.println(" ------ Практическая 7 ------ ");
+        Game stack = new Game();
+        stack.main();
+
+
+        /*
 
         System.out.println(" ------ Практическая 5 ------ ");
         Recursion rec = new Recursion();
@@ -26,7 +27,7 @@ public class Main {
         System.out.println("");
 
 
-        /*
+
 
         System.out.println(" ------ Практическая 4 ------ ");
         new GUI().setVisible(true);
