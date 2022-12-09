@@ -1,15 +1,26 @@
 package com.company;
+import com.company.lab.lab7.TestArrayList;
+import com.company.lab.lab8.FileTest;
 import com.company.pract.pract7.Game;
 
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(" ------ Практическая 7 ------ ");
-        Game stack = new Game();
-        stack.main();
+        System.out.println(" ------ Лабораторная 8 ------ ");
+        FileTest file = new FileTest();
+        file.main();
+
 
 
         /*
+
+        System.out.println(" ------ Лабораторная 7 ------ ");
+        TestArrayList testArray = new TestArrayList();
+        testArray.main();
+
+        System.out.println(" ------ Практическая 7 ------ ");
+        Game stack = new Game();
+        stack.main();
 
         System.out.println(" ------ Практическая 5 ------ ");
         Recursion rec = new Recursion();
