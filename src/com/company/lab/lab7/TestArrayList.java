@@ -17,8 +17,7 @@ public class TestArrayList {
 
         // Вывод содержимого ArrayList
         System.out.println("\nДанные списка:");
-        for (Integer i  : list)
-            System.out.println("  " + i);
+        System.out.println(list);
 
         // Удаление элемента из ArrayList
         System.out.println("\n* Удаление элемента под индексом 0");
@@ -26,15 +25,15 @@ public class TestArrayList {
 
         // Вывод содержимого ArrayList
         System.out.println("\n* Данные списка:");
-        for (Integer i  : list)
-            System.out.println("  " + i);
+        System.out.println(list);
 
         System.out.println("\n* Добавление элементов 1, 3 и 8");
         list.add(1); list.add(3); list.add(8);
 
-        // Сортировка списка
+        // Сортировка списка и его разворот
         System.out.println("* Сортировка элементов списка");
         Collections.sort(list);
+        Collections.reverse(list);
 
         System.out.println("\n* Данные списка:");
         for (Integer i  : list)
