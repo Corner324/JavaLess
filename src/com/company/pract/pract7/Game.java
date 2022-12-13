@@ -48,13 +48,19 @@ public class Game {
             System.out.println("  Игрок 2 вытаскивает карту - " + card2);
 
             if (card1 < card2){
-                System.out.println("Игрок 1 побеждает, в его колоде теперь " + (deck1.size() + 1) + " карт\n");
+                System.out.println("Игрок 1 побеждает, в его колоде теперь " + (deck1.size() + 2) + " карт\n");
                 deck1.addLast(card1);
                 deck1.addLast(card2);
             }
-            else{
-                System.out.println("Игрок 2 побеждает, в его колоде теперь " + (deck2.size() + 1) + " карт\n");
+            else if(card1 > card2){
+                System.out.println("Игрок 2 побеждает, в его колоде теперь " + (deck2.size() + 2) + " карт\n");
                 deck2.addLast(card1);
+                deck2.addLast(card2);
+            }
+            else
+            {
+                System.out.println("Выпали одинаковые карты, ход повторяется");
+                deck1.addLast(card1);
                 deck2.addLast(card2);
             }
             gameCount++;
