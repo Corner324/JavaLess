@@ -15,7 +15,7 @@ public class Game {
 
     public void main(){
 
-        System.out.println(" -------- Карточная игра \"Пьяница\" -------- ");
+        System.out.println("\n -------- Карточная игра \"Пьяница\" -------- ");
 
 
         // Компановка карт в колоды
@@ -29,37 +29,52 @@ public class Game {
 
 
         // Начало игры
-        System.out.println("      ------ Игра началась ------ \n");
+        //System.out.println("      ------ Игра началась ------ \n");
         while (true) {
 
             if (gameCount > 106){
                 System.out.println("botva");
-                System.out.println("      ------ Игра завершена ------ ");
+                //System.out.println("      ------ Игра завершена ------ ");
                 return;
             }
             if (deck1.size() == 10 || deck2.size() == 10){
-                System.out.println("      ------ Игра завершена ------ ");
+                //System.out.println("      ------ Игра завершена ------ ");
+                if (deck1.size() == 10)
+                    System.out.println("first" + gameCount );
+                if (deck2.size() == 10)
+                    System.out.println("second " + gameCount );
                 return;
             }
 
             int card1 = deck1.pollFirst();
-            System.out.println("  Игрок 1 вытаскивает карту - " + card1);
+            //System.out.println("  Игрок 1 вытаскивает карту - " + card1);
             int card2 = deck2.pollFirst();
-            System.out.println("  Игрок 2 вытаскивает карту - " + card2);
+            //System.out.println("  Игрок 2 вытаскивает карту - " + card2);
 
-            if (card1 < card2){
-                System.out.println("Игрок 1 побеждает, в его колоде теперь " + (deck1.size() + 2) + " карт\n");
+
+            if(card1 == 0){
+                //System.out.println("Игрок 1 побеждает, в его колоде теперь " + (deck2.size() + 2) + " карт\n");
                 deck1.addLast(card1);
                 deck1.addLast(card2);
             }
-            else if(card1 > card2){
-                System.out.println("Игрок 2 побеждает, в его колоде теперь " + (deck2.size() + 2) + " карт\n");
+            else if(card2 == 0){
+                //System.out.println("Игрок 2 побеждает, в его колоде теперь " + (deck2.size() + 2) + " карт\n");
+                deck2.addLast(card1);
+                deck2.addLast(card2);
+            }
+            else if (card1 > card2){
+                //System.out.println("Игрок 1 побеждает, в его колоде теперь " + (deck1.size() + 2) + " карт\n");
+                deck1.addLast(card1);
+                deck1.addLast(card2);
+            }
+            else if(card1 < card2){
+                //System.out.println("Игрок 2 побеждает, в его колоде теперь " + (deck2.size() + 2) + " карт\n");
                 deck2.addLast(card1);
                 deck2.addLast(card2);
             }
             else
             {
-                System.out.println("Выпали одинаковые карты, ход повторяется");
+                //System.out.println("Выпали одинаковые карты, ход повторяется");
                 deck1.addLast(card1);
                 deck2.addLast(card2);
             }

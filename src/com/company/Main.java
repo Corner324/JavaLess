@@ -8,11 +8,11 @@ public class Main {
 
         System.out.println(" ------ Лабораторная 7 ------ ");
         TestArrayList testArray = new TestArrayList();
-        testArray.main();
+        //testArray.main();
 
         System.out.println(" ------ Лабораторная 8 ------ ");
         FileTest file = new FileTest();
-        file.main();
+        //file.main();
 
         System.out.println(" ------ Практическая 7 ------ ");
         Game stack = new Game();
